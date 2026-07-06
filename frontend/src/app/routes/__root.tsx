@@ -8,11 +8,11 @@ import {
 } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 
-type RouteContext = {
+type RouteContextState = {
   queryClient: QueryClient;
 };
 
-export const Route = createRootRouteWithContext<RouteContext>()({
+export const Route = createRootRouteWithContext<RouteContextState>()({
   component: () => (
     <>
       <HeadContent />
