@@ -5,6 +5,8 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import tanstackRouter from '@tanstack/eslint-plugin-router';
+import tanstackQuery from '@tanstack/eslint-plugin-query';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
@@ -21,6 +23,8 @@ export default defineConfig([
       reactRefresh.configs.vite,
       importX.flatConfigs.recommended,
       importX.flatConfigs.typescript,
+      tanstackRouter.configs['flat/recommended'],
+      tanstackQuery.configs['flat/recommended'],
       prettier,
     ],
     rules: {
